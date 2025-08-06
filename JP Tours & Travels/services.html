@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - JP Tours & Travels</title>
+  <style>
+
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #731904;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .main-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .main-nav .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .main-nav a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      margin: 0 8px;
+    }
+ 
+ #contact {
+    position: relative;
+    padding: 30px 0;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 10;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#contact-box form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#contact-box label {
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+}
+.hero-gallery { position: relative; text-align: center; padding: 20px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 10px; }
+.gallery img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; }
+.footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+ h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+.services {
+    padding: 100px 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+ .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.services-text {
+    flex: 1 1 50%;
+}
+     
+.services-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #f9c74f, #f9844a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.features {
+    margin-top: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.feature i {
+    color: #f9c74f;
+    margin-right: 10px;
+}
+
+.services-stats {
+    flex: 1 1 45%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.achievement-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    font-size: 30px;
+    color: #f9844a;
+    margin-bottom: 10px;
+}
+
+.achievement-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 5px 0;
+    color: #222;
+}
+
+.achievement-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.achievement-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.activity-style-one {
+    background-color: #e6f0ff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.activity-style-one .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.activity-style-one .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.activity-style-one .col-lg-4,
+.activity-style-one .col-sm-6 {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+}
+
+.activity-style-one .box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.activity-style-one .box:hover {
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+    transform: translateY(-8px);
+}
+
+.activity-style-one .h-secondary {
+    margin-bottom: 15px;
+    color: #004466;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.activity-style-one p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .activity-style-one .col-lg-4,
+    .activity-style-one .col-sm-6 {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-style-one .col-lg-4,
+    .activity-style-one .col-sm-6 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+.footer { background: #c4dae2; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 20px; padding: 30px 20px; }
+.footer .col { flex: 1; min-width: 200px; }
+.footer .col h4 { margin-bottom: 10px; font-weight: 500; }
+.footer .col ul { list-style: none; }
+.footer .col ul li { margin-bottom: 8px; }
+.footer .col ul li a { text-decoration: none; color: #333; }
+.footer-bottom { text-align: center; padding: 12px; color: #210f0f; font-size: 13px; }
+
+    </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="contact-left">📞 +91 8532003202 | ✉ jptours&travel@gmail.com</div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="logo"><img src="d:\images\JP Logo.jpg" alt="Logo"></a>
+    <a href="#">JP Tours & Travels</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="index.html">Tour Packages</a></li>
+      <li><a href="tour-activities.html">Tour Activities</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="toue-my-plan.html">Tour My Plan</a></li>
+      <li><a href="index.html">Blog</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="pay-onlin.html">Pay Online</a></li>
+    </ul>
+  </nav>
+  <section class="hero-gallery">
+    <div class="gallery">
+
+      <img src="d:\images\services.jpg" alt="">
+      
+    </div>
+  </section>
+  <section id="our-services" class="services">
+        <div class="container">
+            <div class="services-content">
+                <div class="services">
+                    <h2>Our<span class="gradient-text">Services</span></h2>
+                    <p>At JP Tours and Travels, we offer a complete range of travel solutions tailored to meet your needs. Whether you're planning a relaxing getaway, a cultural tour, or an adventurous trip, our expert team is here to make your journey smooth and memorable.</p>
+                    <p>Our team of passionate travel experts is dedicated to providing personalized service, ensuring every detail of your journey is carefully planned and executed. From exotic destinations to luxury accommodations, we make your travel dreams a reality.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Customer Support</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Personalized Travel Planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="services-stats">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>50,000+</h3>
+                        <h4>Happy Customers</h4>
+                        <p>Satisfied travelers who trust us with their dream vacations</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>500+</h3>
+                        <h4>Destinations</h4>
+                        <p>Amazing places across the globe waiting to be explored</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>25+</h3>
+                        <h4>Awards Won</h4>
+                        <p>Recognition for excellence in travel and customer service</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>15+</h3>
+                        <h4>Years Experience</h4>
+                        <p>Dedicated years of creating unforgettable travel memories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+     <section class="activity-style-one pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center">Personalized Tours</h2>
+                        <p class="center">
+                            Customize your travel itinerary with our expert planners to create experiences that are uniquely
+                            yours.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center">Seamless Transport</h2>
+                        <p class="center">
+                            Enjoy hassle-free travel with our reliable transport services including cabs, buses, and luxury cars.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center">24/7 Customer Support</h2>
+                        <p class="center">
+                            Our dedicated support team is always ready to help you with any queries before, during, and after
+                            your trip.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer class="footer">
+    <div class="footer-top">
+      <div class="col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Same Day Tours</a></li>
+          <li><a href="#">Taj Mahal Tours</a></li>
+          <li><a href="#">Golden Triangle Tours</a></li>
+          <li><a href="#">Tour Activities</a></li>
+          <li><a href="#">Tour My Plan</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contact Us</h4>
+        <p>Ground Floor, Taj Nagari, Fatehabad Road, Agra<br>+91 8532003202<br>jptours&travel@gmail.com</p>
+      </div>
+      <div class="col">
+        <h4>Payment Partners</h4>
+        <img src="d:\images\partner.jpg" alt="Partners">
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 Your Site Title. All Rights Reserved.</div>
+  </footer>
+</body>
+
+</html>
+ 

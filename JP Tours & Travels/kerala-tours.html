@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayurveda Tours - JP Tours & Travels</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #6f1a07;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .main-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .main-nav .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .main-nav a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-links li {
+  position: relative;
+  padding: 15px 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a {
+  color: #000;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+
+   .horizontal-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+
+.item-card {
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: start;
+}
+
+
+.item-single {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.item-single:hover {
+  transform: translateY(-5px);
+}
+
+
+.item-single-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.item-single-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.item-single-img .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff5e14;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+
+.item-single-body {
+  padding: 15px;
+}
+
+.item-single-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+
+.item-single-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ffb703;
+}
+
+.item-single-rating .text-white i {
+  color: #ffb703;
+}
+
+.rating-text {
+  color: #777;
+}
+
+
+.item-single-attributes {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.item-single-attributes li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #666;
+}
+
+
+.item-single-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.item-single-price .price-from {
+  color: #777;
+  font-size: 13px;
+}
+
+.item-single-price .price-num {
+  font-weight: 600;
+  color: #ff5e14;
+}
+
+.item-single-price .price-text {
+  color: #777;
+  font-size: 13px;
+}
+
+
+.btn-text {
+  font-weight: 500;
+  color: #ff5e14;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  display: block;
+  font-size: 14px;
+  color: #ff5e14;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+@media (min-width: 992px) {
+  .horizontal-scroll-wrapper {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: space-between;
+  }
+
+  .item-card {
+    width: 23%;
+    margin-bottom: 20px;
+  }
+}
+
+
+    .hero-gallery { position: relative; text-align: center; padding: 20px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 10px; }
+.gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+.buttons { margin: 20px 0; }
+.btn { padding: 10px 20px; border-radius: 25px; font-weight: 500; text-decoration: none; margin: 0 8px; transition: opacity .3s; }
+.btn-primary { background: #007a74; color: #fff; }
+.btn-secondary { background: #b15200; color: #fff; }
+.btn:hover { opacity: .85; }
+
+.activity-style-one {
+    background-color: #e6f0ff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.activity-style-one .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.activity-style-one .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.activity-style-one .col-lg-4,
+.activity-style-one .col-sm-6 {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+}
+
+.activity-style-one .box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.activity-style-one .box:hover {
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+    transform: translateY(-8px);
+}
+
+.activity-style-one .h-secondary {
+    margin-bottom: 15px;
+    color: #004466;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.activity-style-one p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .activity-style-one .col-lg-4,
+    .activity-style-one .col-sm-6 {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-style-one .col-lg-4,
+    .activity-style-one .col-sm-6 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.footer { background: #f4f4f4; }
+.footer-top { display: flex; flex-wrap: wrap; gap: 20px; padding: 30px 20px; }
+.footer .col { flex: 1; min-width: 200px; }
+.footer .col h4 { margin-bottom: 10px; font-weight: 500; }
+.footer .col ul { list-style: none; }
+.footer .col ul li { margin-bottom: 8px; }
+.footer .col ul li a { text-decoration: none; color: #333; }
+.footer-bottom { text-align: center; padding: 12px; color: #999; font-size: 13px; }
+
+
+
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="contact-left">📞 +91 8532003202 | ✉ jptours&travel@gmail.com</div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="logo"><img src="d:\images\JP Logo.jpg" alt="Logo"></a>
+    <a href="#">JP Tours & Travels</a>
+     <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li class="item"><a href="about-us.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Tour Packages ▾</a>
+        <ul class="dropdown-menu">
+         <li><a href="same-day-tours.html">Same Day Tours</a></li>
+          <li><a href="taj-mahal-tours.html">Taj Mahal Tours</a></li>
+          <li><a href="golden-triangle-tours.html">Golden Triangle Tours</a></li>
+          <li><a href="varanasi-tours.html">Varanasi Tours</a></li>
+          <li><a href="rajasthan-tours.html">Rajasthan Tours</a></li>
+          <li><a href="himachal-tours.html">Himachal Tours</a></li>
+          <li><a href="wildlife-tours.html">Wildlife Tours</a></li>
+          <li><a href="kerala-tours.html">Kerala Tours</a></li> 
+          <li><a href="ayurveda-tours.html">Ayurveda Tours</a></li>
+        </ul>
+      </li>
+
+      <li class="item"><a href="tour-activities.html">Tour Activities</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="toue-my-plan.html">Tour My Plan</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="pay-online.html">Pay Online</a></li>
+    </ul>
+  </nav>
+  <section class="hero-gallery">
+    <div class="gallery">
+
+      <img src="d:\images\kerala\3.jpg" alt="">
+      <img src="d:\images\kerala\4.jpg" alt="">
+      <img src="d:\images\kerala\10.jpg" alt="">
+      <img src="d:\images\kerala\12.jpg" alt="">
+      <img src="d:\images\kerala\13.jpg" alt="">
+    </div>
+    <div class="buttons">
+      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="#" class="btn btn-secondary">Know More</a>
+    </div>
+  </section>
+
+  <section class="activity-style-one pb-100">
+  <div class="container">
+    <div class="section-title">
+      <span>Top Tours</span>
+      <h2>Kerala Tours</h2>
+      <p>Cruise through the tranquil backwaters of Alleppey or Kumarakom in a traditional houseboat. Enjoy stunning views of coconut groves, paddy fields, and village life while relishing freshly prepared Keralan cuisine onboard.
+
+</p>
+    </div>
+
+    <div class="horizontal-scroll-wrapper">
+
+      
+      <div class="item-card">
+        <a href="taj-mahal-day-tour-by-car-from-delhi.php">
+          <div class="item-single"> 
+            <div class="item-single-img">
+              <img src="d:\images\kerala\1.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title">Kerala Backwaters & Houseboat Tour</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">2005 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1760*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="sunrise-taj-mahal-tour-from-delhi.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\11.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title">Kerala Ayurveda & Wellness Retreat</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">428 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1760*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="taj-mahal-tour-by-gatimaan-express.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\9.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title">Kerala Wildlife & Jungle Safari Tour</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">367 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 6960*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="taj-mahal-tour-from-bangalore.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\7.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title"> Kerala Beaches & Coastal Bliss Tour</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">167 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1760*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="taj-mahal-tour-from-mumbai.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\0.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title"> Kerala Honeymoon Special</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">95 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1760*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="same-day-jaipur-tour.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\14.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title"> Kerala Temple & Spiritual Tour </h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">245 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>1 Day</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1760*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="same-day-delhi-tour.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\8.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title"> Kerala Village Life Experience</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">150 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>8-10 Hours</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1120*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="item-card">
+        <a href="delhi-walk-tour.php">
+          <div class="item-single">
+            <div class="item-single-img">
+              <img src="d:\images\kerala\2.jpg" alt="activity-img">
+              <span class="badge">Bestseller</span>
+            </div>
+            <div class="item-single-body">
+              <h3 class="item-single-title">Kerala Culture & Arts Tour</h3>
+              <div class="item-single-rating">
+                <span class="badge text-white"><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i></span>
+                <span class="rating-text">100 Reviews</span>
+              </div>
+              <ul class="item-single-attributes">
+                <li><i class="la la-users"></i><span>12</span></li>
+                <li><i class="la la-clock"></i><span>3-4 Hours</span></li>
+              </ul>
+              <div class="item-single-price">
+                <p><span class="price-from">From</span><span class="price-num">INR 1120*</span><span class="price-text">per person</span></p>
+                <span class="btn-text">See details <i class="la la-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="activity-style-one pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center">Eco-Tourism & Nature Trails of Kerala</h2>
+                        <p class="center">
+                          Explore Kerala’s rich biodiversity with eco-friendly stays, nature walks, birdwatching, and responsible travel activities. Visit eco-destinations like Thenmala, Gavi, and Silent Valley National Park.
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center"> Kerala Adventure Tour</h2>
+                        <p class="center">
+                            Capture stunning landscapes, cultural portraits, temple rituals, and colorful festivals. From hill station sunrises to backwater reflections, this tour is tailor-made for travel photographers and creatives.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="box">
+                        <h2 class="h-secondary center">Kerala Photography Tour</h2>
+                        <p class="center">
+                           Capture stunning landscapes, cultural portraits, temple rituals, and colorful festivals. From hill station sunrises to backwater reflections, this tour is tailor-made for travel photographers and creatives.
+ 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Same Day Tours</a></li>
+          <li><a href="#">Taj Mahal Tours</a></li>
+          <li><a href="#">Golden Triangle Tours</a></li>
+          <li><a href="#">Tour Activities</a></li>
+          <li><a href="#">Tour My Plan</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contact Us</h4>
+        <p>Ground Floor, Taj Nagari, Fatehabad Road, Agra<br>+91 8532003202<br>jptours&travel@gmail.com</p>
+      </div>
+      <div class="col">
+        <h4>Payment Partners</h4>
+        <img src="d:\images\partner.jpg" alt="Partners">
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 Your Site Title. All Rights Reserved.</div>
+  </footer>
+</body>
+
+</html>

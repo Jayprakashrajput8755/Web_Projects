@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour My Plan - JP Tours & Travels</title>
+  <style>
+ 
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #5f1904;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .main-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .main-nav .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .main-nav a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      margin: 0 8px;
+    }
+ 
+ #contact {
+    position: relative;
+    padding: 30px 0;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 10;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#contact-box form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#contact-box label {
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+}
+.hero-gallery { position: relative; text-align: center; padding: 20px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 10px; }
+.gallery img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; }
+.footer { background: #f4f4f4; }
+
+
+.footer-top { display: flex; flex-wrap: wrap; gap: 20px; padding: 30px 20px; }
+.footer .col { flex: 1; min-width: 200px; }
+.footer .col h4 { margin-bottom: 10px; font-weight: 500; }
+.footer .col ul { list-style: none; }
+.footer .col ul li { margin-bottom: 8px; }
+.footer .col ul li a { text-decoration: none; color: #333; }
+.footer-bottom { text-align: center; padding: 12px; color: #999; font-size: 13px; }
+
+ h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="contact-left">📞 +91 8532003202 | ✉ jptours&travel@gmail.com</div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" class="logo"><img src="d:\images\JP Logo.jpg" alt="Logo"></a>
+    <a href="#">JP Tours & Travels</a>
+    <ul class="nav-links">
+      <li><a href="about-us.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="index.html">Tour Packages</a></li>
+      <li><a href="tour-activities.html">Tour Activities</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="toue-my-plan.html">Tour My Plan</a></li>
+      <li><a href="index.html">Blog</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="pay-online.html">Pay Online</a></li>
+    </ul>
+  </nav>
+  <section class="hero-gallery">
+    <div class="gallery">
+
+      <img src="d:\images\tour plan.jpg" alt="">
+      
+    </div>
+  </section>
+ 
+ 
+ 
+ <section id="contact">
+        <h1 class="h-primary center">Tour My Plan</h1>
+        <div id="contact-box">
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
+                </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+            </form>
+        </div>
+    </section>
+     <footer class="footer">
+    <div class="footer-top">
+      <div class="col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Same Day Tours</a></li>
+          <li><a href="#">Taj Mahal Tours</a></li>
+          <li><a href="#">Golden Triangle Tours</a></li>
+          <li><a href="#">Tour Activities</a></li>
+          <li><a href="#">Tour My Plan</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contact Us</h4>
+        <p>Ground Floor, Taj Nagari, Fatehabad Road, Agra<br>+91 8532003202<br>jptours&travel@gmail.com</p>
+      </div>
+      <div class="col">
+        <h4>Payment Partners</h4>
+        <img src="d:\images\partner.jpg" alt="Partners">
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 Your Site Title. All Rights Reserved.</div>
+  </footer>
+</body>
+
+</html>
